@@ -25,7 +25,7 @@ SET row_security = off;
 -- Name: defaultdb; Type: DATABASE; Schema: -; Owner: avnadmin
 --
 
-CREATE DATABASE defaultdb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.UTF-8';
+--CREATE DATABASE defaultdb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.UTF-8';
 
 
 ALTER DATABASE defaultdb OWNER TO avnadmin;
