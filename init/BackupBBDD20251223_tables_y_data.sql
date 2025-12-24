@@ -22,7 +22,7 @@ SET row_security = off;
 -- CREATE SCHEMA public;
 
 -- Aseguramos que el propietario sea postgres (usuario que sí existe)
-ALTER SCHEMA public OWNER TO postgres;
+ALTER SCHEMA public OWNER TO defaultdb_uk1q_user;
 
 -- Secuencia
 CREATE SEQUENCE public.empresa_id_empresa_seq
@@ -33,7 +33,7 @@ CREATE SEQUENCE public.empresa_id_empresa_seq
     CACHE 1;
 
 -- Cambiamos propietario a postgres
-ALTER SEQUENCE public.empresa_id_empresa_seq OWNER TO postgres;
+ALTER SEQUENCE public.empresa_id_empresa_seq OWNER TO defaultdb_uk1q_user;
 
 SET default_tablespace = '';
 SET default_table_access_method = heap;
