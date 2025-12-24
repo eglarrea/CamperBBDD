@@ -28,7 +28,7 @@ SET row_security = off;
 --CREATE DATABASE defaultdb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.UTF-8';
 
 
-ALTER DATABASE defaultdb OWNER TO avnadmin;
+--ALTER DATABASE defaultdb OWNER TO avnadmin;
 
 \connect defaultdb
 
