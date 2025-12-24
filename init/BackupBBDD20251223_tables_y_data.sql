@@ -1,11 +1,6 @@
 --
--- PostgreSQL database dump
+-- PostgreSQL database dump (limpiado para Docker)
 --
-
--- Dumped from database version 17.7
--- Dumped by pg_dump version 17.5
-
--- Started on 2025-12-23 20:05:52
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,55 +14,17 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
---DROP DATABASE IF EXISTS defaultdb;
---
--- TOC entry 4478 (class 1262 OID 16462)
--- Name: defaultdb; Type: DATABASE; Schema: -; Owner: avnadmin
---
-
---CREATE DATABASE defaultdb WITH TEMPLATE = template0 ENCODING = 'UTF8' LOCALE_PROVIDER = libc LOCALE = 'en_US.UTF-8';
-
-
---ALTER DATABASE defaultdb OWNER TO avnadmin;
-
+-- Creamos la base si no existe
+CREATE DATABASE defaultdb;
 \connect defaultdb
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET transaction_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SELECT pg_catalog.set_config('search_path', '', false);
-SET check_function_bodies = false;
-SET xmloption = content;
-SET client_min_messages = warning;
-SET row_security = off;
+-- El esquema public ya existe en PostgreSQL, así que NO lo creamos
+-- CREATE SCHEMA public;
 
---
--- TOC entry 4 (class 2615 OID 2200)
--- Name: public; Type: SCHEMA; Schema: -; Owner: pg_database_owner
---
+-- Aseguramos que el propietario sea postgres (usuario que sí existe)
+ALTER SCHEMA public OWNER TO postgres;
 
-CREATE SCHEMA public;
-
-
-ALTER SCHEMA public OWNER TO pg_database_owner;
-
---
--- TOC entry 4479 (class 0 OID 0)
--- Dependencies: 4
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: pg_database_owner
---
-
-COMMENT ON SCHEMA public IS 'standard public schema';
-
-
---
--- TOC entry 217 (class 1259 OID 24579)
--- Name: empresa_id_empresa_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
---
-
+-- Secuencia
 CREATE SEQUENCE public.empresa_id_empresa_seq
     START WITH 1
     INCREMENT BY 1
@@ -75,12 +32,12 @@ CREATE SEQUENCE public.empresa_id_empresa_seq
     MAXVALUE 2147483647
     CACHE 1;
 
-
-ALTER SEQUENCE public.empresa_id_empresa_seq OWNER TO avnadmin;
+-- Cambiamos propietario a postgres
+ALTER SEQUENCE public.empresa_id_empresa_seq OWNER TO postgres;
 
 SET default_tablespace = '';
-
 SET default_table_access_method = heap;
+
 
 --
 -- TOC entry 219 (class 1259 OID 24602)
