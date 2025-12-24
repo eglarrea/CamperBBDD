@@ -15,7 +15,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 -- Creamos la base si no existe
-CREATE DATABASE defaultdb;
+--CREATE DATABASE defaultdb;
 \connect defaultdb
 
 -- El esquema public ya existe en PostgreSQL, así que NO lo creamos
