@@ -19,7 +19,7 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-DROP DATABASE IF EXISTS defaultdb;
+--DROP DATABASE IF EXISTS defaultdb;
 --
 -- TOC entry 4478 (class 1262 OID 16462)
 -- Name: defaultdb; Type: DATABASE; Schema: -; Owner: avnadmin
