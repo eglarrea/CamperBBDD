@@ -41,7 +41,7 @@ SET default_table_access_method = heap;
 
 --
 -- TOC entry 219 (class 1259 OID 24602)
--- Name: empresas; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: empresas; Type: TABLE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE TABLE public.empresas (
@@ -51,11 +51,11 @@ CREATE TABLE public.empresas (
 );
 
 
-ALTER TABLE public.empresas OWNER TO avnadmin;
+ALTER TABLE public.empresas OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 221 (class 1259 OID 24645)
--- Name: parkings; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: parkings; Type: TABLE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE TABLE public.parkings (
@@ -75,11 +75,11 @@ CREATE TABLE public.parkings (
 );
 
 
-ALTER TABLE public.parkings OWNER TO avnadmin;
+ALTER TABLE public.parkings OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 222 (class 1259 OID 24657)
--- Name: parking_id_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: parking_id_seq; Type: SEQUENCE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE SEQUENCE public.parking_id_seq
@@ -90,12 +90,12 @@ CREATE SEQUENCE public.parking_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.parking_id_seq OWNER TO avnadmin;
+ALTER SEQUENCE public.parking_id_seq OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 4480 (class 0 OID 0)
 -- Dependencies: 222
--- Name: parking_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: avnadmin
+-- Name: parking_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER SEQUENCE public.parking_id_seq OWNED BY public.parkings.id_parking;
@@ -103,7 +103,7 @@ ALTER SEQUENCE public.parking_id_seq OWNED BY public.parkings.id_parking;
 
 --
 -- TOC entry 218 (class 1259 OID 24586)
--- Name: persona_id_persona_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: persona_id_persona_seq; Type: SEQUENCE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE SEQUENCE public.persona_id_persona_seq
@@ -114,11 +114,11 @@ CREATE SEQUENCE public.persona_id_persona_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.persona_id_persona_seq OWNER TO avnadmin;
+ALTER SEQUENCE public.persona_id_persona_seq OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 220 (class 1259 OID 24608)
--- Name: personas; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: personas; Type: TABLE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE TABLE public.personas (
@@ -135,11 +135,11 @@ CREATE TABLE public.personas (
 );
 
 
-ALTER TABLE public.personas OWNER TO avnadmin;
+ALTER TABLE public.personas OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 223 (class 1259 OID 24669)
--- Name: plazas_id_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: plazas_id_seq; Type: SEQUENCE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE SEQUENCE public.plazas_id_seq
@@ -150,11 +150,11 @@ CREATE SEQUENCE public.plazas_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.plazas_id_seq OWNER TO avnadmin;
+ALTER SEQUENCE public.plazas_id_seq OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 224 (class 1259 OID 24670)
--- Name: plazas; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: plazas; Type: TABLE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE TABLE public.plazas (
@@ -168,11 +168,11 @@ CREATE TABLE public.plazas (
 );
 
 
-ALTER TABLE public.plazas OWNER TO avnadmin;
+ALTER TABLE public.plazas OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 226 (class 1259 OID 24682)
--- Name: reservas; Type: TABLE; Schema: public; Owner: avnadmin
+-- Name: reservas; Type: TABLE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE TABLE public.reservas (
@@ -187,11 +187,11 @@ CREATE TABLE public.reservas (
 );
 
 
-ALTER TABLE public.reservas OWNER TO avnadmin;
+ALTER TABLE public.reservas OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 225 (class 1259 OID 24681)
--- Name: reservas_id_reserva_seq; Type: SEQUENCE; Schema: public; Owner: avnadmin
+-- Name: reservas_id_reserva_seq; Type: SEQUENCE; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 CREATE SEQUENCE public.reservas_id_reserva_seq
@@ -203,12 +203,12 @@ CREATE SEQUENCE public.reservas_id_reserva_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.reservas_id_reserva_seq OWNER TO avnadmin;
+ALTER SEQUENCE public.reservas_id_reserva_seq OWNER TO defaultdb_uk1q_user;
 
 --
 -- TOC entry 4481 (class 0 OID 0)
 -- Dependencies: 225
--- Name: reservas_id_reserva_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: avnadmin
+-- Name: reservas_id_reserva_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER SEQUENCE public.reservas_id_reserva_seq OWNED BY public.reservas.id_reserva;
@@ -216,7 +216,7 @@ ALTER SEQUENCE public.reservas_id_reserva_seq OWNED BY public.reservas.id_reserv
 
 --
 -- TOC entry 4297 (class 2604 OID 24701)
--- Name: parkings id_parking; Type: DEFAULT; Schema: public; Owner: avnadmin
+-- Name: parkings id_parking; Type: DEFAULT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.parkings ALTER COLUMN id_parking SET DEFAULT nextval('public.parking_id_seq'::regclass);
@@ -224,7 +224,7 @@ ALTER TABLE ONLY public.parkings ALTER COLUMN id_parking SET DEFAULT nextval('pu
 
 --
 -- TOC entry 4299 (class 2604 OID 24757)
--- Name: reservas id_reserva; Type: DEFAULT; Schema: public; Owner: avnadmin
+-- Name: reservas id_reserva; Type: DEFAULT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.reservas ALTER COLUMN id_reserva SET DEFAULT nextval('public.reservas_id_reserva_seq'::regclass);
@@ -233,7 +233,7 @@ ALTER TABLE ONLY public.reservas ALTER COLUMN id_reserva SET DEFAULT nextval('pu
 --
 -- TOC entry 4465 (class 0 OID 24602)
 -- Dependencies: 219
--- Data for Name: empresas; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: empresas; Type: TABLE DATA; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 INSERT INTO public.empresas (id_empresa, nombre_empresa, cif_empresa) VALUES (1, 'Hemen-go', 'B4896522');
@@ -242,7 +242,7 @@ INSERT INTO public.empresas (id_empresa, nombre_empresa, cif_empresa) VALUES (1,
 --
 -- TOC entry 4467 (class 0 OID 24645)
 -- Dependencies: 221
--- Data for Name: parkings; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: parkings; Type: TABLE DATA; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 INSERT INTO public.parkings (id_parking, id_empresa_parking, nombre_parking, provincia_parking, municipio_parking, isactivo_parking, web_parking, telefono_parking, email_parking, persona_contacto_parking, tiene_electricidad_parking, tiene_residuales_parking, tiene_plazas_vip_parking) VALUES (1, 1, 'Parking La Galea beach', 'Bizkaia', 'Getxo', true, 'https://www.la-galea-caravaning.com', '688745692', 'info@la-galea-caravaning.com', 'Mikel Basurko', true, true, true);
@@ -251,7 +251,7 @@ INSERT INTO public.parkings (id_parking, id_empresa_parking, nombre_parking, pro
 --
 -- TOC entry 4466 (class 0 OID 24608)
 -- Dependencies: 220
--- Data for Name: personas; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: personas; Type: TABLE DATA; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 INSERT INTO public.personas (id_persona, dni_persona, nombre_persona, apellidos_persona, fec_nacimiento_persona, iban_persona, email_persona, pass_persona, is_admin, id_empresa_persona) VALUES (11, '12345678A', 'Jon', 'Doe', '1990-05-12', 'ES1234567890123456789012', 'jon.doe@example.com', '$2a$10$nbt1FRaXkFnLoeEQX6LT/.7EoXY2fONUijkYKYiQtbEb2v059Yxqq', false, 1);
@@ -272,7 +272,7 @@ INSERT INTO public.personas (id_persona, dni_persona, nombre_persona, apellidos_
 --
 -- TOC entry 4470 (class 0 OID 24670)
 -- Dependencies: 224
--- Data for Name: plazas; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: plazas; Type: TABLE DATA; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 INSERT INTO public.plazas (id_plaza, id_parking_plaza, nombre_plaza, isvip_plaza, tiene_electricidad_plaza, estado_plaza, precio_plaza) VALUES (1, 1, 'A1', true, true, '0', 25);
@@ -282,7 +282,7 @@ INSERT INTO public.plazas (id_plaza, id_parking_plaza, nombre_plaza, isvip_plaza
 --
 -- TOC entry 4472 (class 0 OID 24682)
 -- Dependencies: 226
--- Data for Name: reservas; Type: TABLE DATA; Schema: public; Owner: avnadmin
+-- Data for Name: reservas; Type: TABLE DATA; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 INSERT INTO public.reservas (id_reserva, id_persona_reserva, id_plaza_reserva, fecha_inicio_reserva, fecha_fin_reserva, fecha_alta_reserva, estado_reserva, puntuacion_reserva) VALUES (15, 57, 1, '2025-11-22', '2025-11-22', '2025-11-18', '0', NULL);
@@ -305,7 +305,7 @@ INSERT INTO public.reservas (id_reserva, id_persona_reserva, id_plaza_reserva, f
 --
 -- TOC entry 4482 (class 0 OID 0)
 -- Dependencies: 217
--- Name: empresa_id_empresa_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: empresa_id_empresa_seq; Type: SEQUENCE SET; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 SELECT pg_catalog.setval('public.empresa_id_empresa_seq', 2, true);
@@ -314,7 +314,7 @@ SELECT pg_catalog.setval('public.empresa_id_empresa_seq', 2, true);
 --
 -- TOC entry 4483 (class 0 OID 0)
 -- Dependencies: 222
--- Name: parking_id_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: parking_id_seq; Type: SEQUENCE SET; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 SELECT pg_catalog.setval('public.parking_id_seq', 1, true);
@@ -323,7 +323,7 @@ SELECT pg_catalog.setval('public.parking_id_seq', 1, true);
 --
 -- TOC entry 4484 (class 0 OID 0)
 -- Dependencies: 218
--- Name: persona_id_persona_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: persona_id_persona_seq; Type: SEQUENCE SET; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 SELECT pg_catalog.setval('public.persona_id_persona_seq', 77, true);
@@ -332,7 +332,7 @@ SELECT pg_catalog.setval('public.persona_id_persona_seq', 77, true);
 --
 -- TOC entry 4485 (class 0 OID 0)
 -- Dependencies: 223
--- Name: plazas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: plazas_id_seq; Type: SEQUENCE SET; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 SELECT pg_catalog.setval('public.plazas_id_seq', 2, true);
@@ -341,7 +341,7 @@ SELECT pg_catalog.setval('public.plazas_id_seq', 2, true);
 --
 -- TOC entry 4486 (class 0 OID 0)
 -- Dependencies: 225
--- Name: reservas_id_reserva_seq; Type: SEQUENCE SET; Schema: public; Owner: avnadmin
+-- Name: reservas_id_reserva_seq; Type: SEQUENCE SET; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 SELECT pg_catalog.setval('public.reservas_id_reserva_seq', 27, true);
@@ -349,7 +349,7 @@ SELECT pg_catalog.setval('public.reservas_id_reserva_seq', 27, true);
 
 --
 -- TOC entry 4302 (class 2606 OID 24607)
--- Name: empresas empresa_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: empresas empresa_pkey; Type: CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.empresas
@@ -358,7 +358,7 @@ ALTER TABLE ONLY public.empresas
 
 --
 -- TOC entry 4308 (class 2606 OID 24703)
--- Name: parkings parkings_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: parkings parkings_pkey; Type: CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.parkings
@@ -367,7 +367,7 @@ ALTER TABLE ONLY public.parkings
 
 --
 -- TOC entry 4304 (class 2606 OID 24731)
--- Name: personas persona_email_un; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: personas persona_email_un; Type: CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.personas
@@ -376,7 +376,7 @@ ALTER TABLE ONLY public.personas
 
 --
 -- TOC entry 4306 (class 2606 OID 24717)
--- Name: personas persona_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: personas persona_pkey; Type: CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.personas
@@ -385,7 +385,7 @@ ALTER TABLE ONLY public.personas
 
 --
 -- TOC entry 4310 (class 2606 OID 24734)
--- Name: plazas plazas_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: plazas plazas_pkey; Type: CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.plazas
@@ -394,7 +394,7 @@ ALTER TABLE ONLY public.plazas
 
 --
 -- TOC entry 4312 (class 2606 OID 24759)
--- Name: reservas reservas_pkey; Type: CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: reservas reservas_pkey; Type: CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.reservas
@@ -403,7 +403,7 @@ ALTER TABLE ONLY public.reservas
 
 --
 -- TOC entry 4314 (class 2606 OID 24652)
--- Name: parkings parking_empresa_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: parkings parking_empresa_fk; Type: FK CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.parkings
@@ -412,7 +412,7 @@ ALTER TABLE ONLY public.parkings
 
 --
 -- TOC entry 4313 (class 2606 OID 24614)
--- Name: personas persona_empresa; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: personas persona_empresa; Type: FK CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.personas
@@ -421,7 +421,7 @@ ALTER TABLE ONLY public.personas
 
 --
 -- TOC entry 4316 (class 2606 OID 24767)
--- Name: reservas persona_reserva_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: reservas persona_reserva_fk; Type: FK CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.reservas
@@ -430,7 +430,7 @@ ALTER TABLE ONLY public.reservas
 
 --
 -- TOC entry 4317 (class 2606 OID 24776)
--- Name: reservas plaza_reserva_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: reservas plaza_reserva_fk; Type: FK CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.reservas
@@ -439,7 +439,7 @@ ALTER TABLE ONLY public.reservas
 
 --
 -- TOC entry 4315 (class 2606 OID 24748)
--- Name: plazas plazas_parking_fk; Type: FK CONSTRAINT; Schema: public; Owner: avnadmin
+-- Name: plazas plazas_parking_fk; Type: FK CONSTRAINT; Schema: public; Owner: defaultdb_uk1q_user
 --
 
 ALTER TABLE ONLY public.plazas
